@@ -1,38 +1,65 @@
-// hacer una app que calcule el impuesto si ganas menos de 1000 debes imprimir "Debes pagar 5%"
-// si ganas mas debes imprimir "Debes pagar el 10%  " , el ingreso esta defindio en una variable
+
+const persona = {
+    nombre: 'Mikel',
+    apellido: 'Sombragris',
+    edad: 47,
+    skills: ['js','react','python'],
+    programar:  function (){
+        console.log('estoy programando')
+        return 'ya termine'
+    },
+    comer: function(){
+        console.log('estoy comiendo')
+    }
+}
+
+const arrayEjemplo = ['Mikel','Sombragris']
 
 
 
 
-// PSEUDOCODIGO
-// definir la variable ingreso
-let ingreso = 500
-// comparar el inreso para ver si es menor a mil
-// let mensaje = ''
-// if( ingreso < 1000){
-//     mensaje = "Debes pagar el 5%"
-// }else{
-//     mensaje = "Debes pagar el 10%"
-// }
-
-let mensaje = ingreso < 1000 ?  "Debes pagar el 5%" :  "Debes pagar el 10%"
-
-console.log(mensaje)
 
 
 
-// Ternary operator
-// (condicion) ? que hago si true : que hago si false
-
-// if(condicion){
-//     que hago si es true
-// }else{
-//  que hago si es false
-// }
 
 
-document.getElementById('content').insertAdjacentHTML(
-    "beforeend",
-    `<b>${mensaje}</b>` 
 
-)
+
+
+
+
+
+
+// Objeto perro , nombre , raza , ladrar "wow"
+const perro = {
+    nombre: 'Stich',
+    raza: 'Shitzu',
+    ladrar: function(){
+        console.log('Wow')
+    }
+}
+
+
+
+
+
+// Agregar una funcion que cambie el texto(nuevo texto) y el color(rojo) del titulo cuando le doy click a un boton
+// DONE: agregar un boton 
+// DONE: cuando le doy click al boton hacer algo
+// DONE: crear funcion 
+function cambiarTitulo(){
+    // DONE: impirmir funcion
+    console.log('cambiarTitulo')
+    // cambiar texto del titulo a (nuevo texto) 
+    document.querySelector('#title').innerHTML = 'Nuevo texto' 
+    // DONE: cambiar color del titulo a (rojo) 
+    document.querySelector('#title').style.color = 'red'
+}
+
+
+
+window.changeTitle = function(){
+    console.log('changeTitle')
+}
+
+changeTitle()
