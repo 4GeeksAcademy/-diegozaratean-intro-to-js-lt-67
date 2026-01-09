@@ -3,6 +3,7 @@ const persona = {
     nombre: 'Mikel',
     apellido: 'Sombragris',
     edad: 47,
+    "Lugar de nacimiento": "Neverwinter",
     skills: ['js','react','python'],
     programar:  function (){
         console.log('estoy programando')
@@ -14,6 +15,7 @@ const persona = {
 }
 
 const arrayEjemplo = ['Mikel','Sombragris']
+
 
 
 
@@ -58,8 +60,59 @@ function cambiarTitulo(){
 
 
 
-window.changeTitle = function(){
-    console.log('changeTitle')
+// window.changeTitle = function(){
+//     console.log('changeTitle')
+// }
+
+// changeTitle()
+
+
+
+// Hacer una app que cambie de forma aleatoria el texto y el color del titulo cuando le doy click al boton cambiar titulo
+
+
+// PSEUDOCODIGO
+// DONE: agregar funcion changeTitle
+function changeTitle(){
+    const colores = ['yellow','green','red','aqua','purple']
+    const nombres = ['Mario','Luigi','Peach','Toad','Yoshi', 'Star']
+    const colorAleatorio = colores[Math.floor(Math.random() * 5)]
+    const nombreAleatorio = nombres[ Math.floor( Math.random() * nombres.length  ) ]
+    document.getElementById('title').innerHTML = nombreAleatorio
+    document.getElementById('title').style.color = colorAleatorio
 }
 
-changeTitle()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// un programa que cuando le doy click a un boton lance dos dados
+// PSEUDOCODIGO
+// DONE: crear un botn
+// DONE:crear una funcion
+function lanzarDados(){
+    let dado1 = Math.floor( Math.random() * 6) + 1
+    let dado2 = Math.ceil( Math.random() * 6) 
+    document.getElementById('dado1').innerText = dado1
+    document.querySelector('#dado2').textContent = dado2
+}
+lanzarDados()
+// DONE: hacer que caudno le docy lcik al boton se llame la funcin
+const botonDados = document.getElementById('botonDados')
+botonDados.addEventListener(
+    "click",
+    ()=>lanzarDados()
+)
