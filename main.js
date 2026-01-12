@@ -116,3 +116,30 @@ botonDados.addEventListener(
     "click",
     ()=>lanzarDados()
 )
+
+
+
+// Hacer un programa/app que cambie las dimensiones de los dados por medio de dos inputs
+// PSEUDOCODIGO
+// DONE: agregar dos inputs en el html
+// DONE: agregar boton a html
+// DONE: crear funcion
+function changeSize(){
+    const inputHeight = document.querySelector('#height').value.trim() 
+    const inputWidth = document.querySelector('#width').value.trim() 
+    document.querySelector('#dado1').style.height = inputHeight + 'px'
+    document.querySelector('#dado1').style.width = `${inputWidth}px` 
+    document.querySelector('#dado2').style.height = inputHeight + 'px'
+    document.querySelector('#dado2').style.width = `${inputWidth}px` 
+    
+}
+// changeSize()
+
+let btnChangeSize = document.querySelector('#btnChangeSize')
+// btnChangeSize.addEventListener('click',changeSize)
+btnChangeSize.onclick = changeSize
+
+
+
+setInterval(lanzarDados, 3000);
+
